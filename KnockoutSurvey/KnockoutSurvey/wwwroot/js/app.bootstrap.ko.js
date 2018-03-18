@@ -1,7 +1,7 @@
 "use strict";
 
-define(['knockout', 'koValidation', 'surveyModel'],
-    function (ko, koValidation, surveyModel) {
+define(['knockout', 'koValidation', 'surveyModel', 'setInterval'],
+    function (ko, koValidation, surveyModel, setInterval) {
 
     return function init() {
 
@@ -16,6 +16,11 @@ define(['knockout', 'koValidation', 'surveyModel'],
             errorMessageClass: 'alert alert-danger'
         }, true);
 
-        ko.applyBindings(new surveyModel());
+        var model = new surveyModel();
+        ko.applyBindings(model);
+
+        setInterval(function () {
+            model.now(new Date());
+        }, 1000);
     }
 });
