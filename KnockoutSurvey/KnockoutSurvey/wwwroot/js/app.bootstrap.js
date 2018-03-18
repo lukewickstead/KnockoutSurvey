@@ -2,6 +2,8 @@
 requirejs.config({
     paths: {
         'jquery': '../lib/jquery/dist/jquery.min',
+        'knockout': '../lib/knockout/dist/knockout',
+        'koValidation': "../lib/knockout/validation/dist/knockout.validation",
     }
 });
 

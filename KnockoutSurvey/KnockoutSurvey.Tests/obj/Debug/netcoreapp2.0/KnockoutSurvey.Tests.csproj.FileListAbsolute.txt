@@ -1,0 +1,13 @@
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/bin/Debug/netcoreapp2.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/bin/Debug/netcoreapp2.0/xunit.runner.utility.netstandard15.dll
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/bin/Debug/netcoreapp2.0/xunit.runner.reporters.netstandard15.dll
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/bin/Debug/netcoreapp2.0/KnockoutSurvey.Tests.deps.json
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/bin/Debug/netcoreapp2.0/KnockoutSurvey.Tests.runtimeconfig.json
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/bin/Debug/netcoreapp2.0/KnockoutSurvey.Tests.runtimeconfig.dev.json
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/bin/Debug/netcoreapp2.0/KnockoutSurvey.Tests.dll
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/bin/Debug/netcoreapp2.0/KnockoutSurvey.Tests.pdb
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/obj/Debug/netcoreapp2.0/KnockoutSurvey.Tests.csproj.CoreCompileInputs.cache
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/obj/Debug/netcoreapp2.0/KnockoutSurvey.Tests.AssemblyInfoInputs.cache
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/obj/Debug/netcoreapp2.0/KnockoutSurvey.Tests.AssemblyInfo.cs
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/obj/Debug/netcoreapp2.0/KnockoutSurvey.Tests.dll
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/obj/Debug/netcoreapp2.0/KnockoutSurvey.Tests.pdb
