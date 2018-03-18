@@ -1,3 +1,123 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+
+
+<!--Page One-->
+<div id="pageOne" data-bind="visible: page() == 1">
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="title">Title</label>
+
+            <div class="col-md-8">
+                <select class="form-control"
+                        id="title"
+                        data-bind="options: availableTitles, value: title, optionsCaption: 'Please select...'">
+                </select>
+                <div class="alert alert-danger fade in"
+                     data-bind="validationMessage: title"
+                     data-icon="glyphicon-heart"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="name">Name</label>
+
+            <div class="col-md-8">
+                <input class="form-control"
+                       id="name"
+                       type="text"
+                       placeholder="Name (required)"
+                       data-bind="value: name"/>
+                <div class="alert alert-danger fade in" data-bind="validationMessage: name"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="dateOfBirth">Date of Birth</label>
+
+            <div class="col-md-8">
+                <input class="form-control"
+                       id="dateOfBirth"
+                       type="text"
+                       placeholder="dd/mm/yyy"
+                       data-bind="value: dateOfBirth"/>
+                <div class="alert alert-danger fade in" data-bind="validationMessage: dateOfBirth"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Page Two-->
+<div id="pageTwo" data-bind="visible: page() == 2">
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="location">Location</label>
+
+            <div class="col-md-8">
+                <input class="form-control"
+                       id="location"
+                       type="text"
+                       placeholder="Location..."
+                       data-bind="value: location",
+                       maxlength="100"/>
+                <div class="alert alert-danger fade in" data-bind="validationMessage: location"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="now">Now</label>
+
+            <div class="col-md-8">
+                <input class="form-control"
+                       id="now"
+                       readonly
+                       type="text"
+                       placeholder="Now"
+                       data-bind="value: nowDisplay()"/>
+                <div class="alert alert-danger fade in" data-bind="validationMessage: now"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="feedback">Feed Back</label>
+
+            <div class="col-md-8">
+                <textarea
+                        class="form-control"
+                        id="feedback"
+                        rows="5"
+                        placeholder="Comments...."
+                        data-bind="value: feedBack",
+                        maxlength="500">
+                </textarea>
+                <div class="alert alert-danger fade in" data-bind="validationMessage: feedBack"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Buttons-->
+<button data-bind="click: gotoPageTwo, visible: page() == 1, enable: isPageOneValid() == true" class="btn btn-primary">Next</button>
+<button data-bind="click: gotoPageOne, visible: page() == 2" class="btn btn-primary">Previous</button>
+<button data-bind="enable: isValid()" class="btn btn-primary">Submit</button>
+
+<legend class="well">
+    <pre data-bind="text: ko.toJSON($data, null, 2)"></pre>
+    Errors: <strong data-bind="text: pageOneErrors().length"></strong> &
+    <strong data-bind="text: pageTwoErrors().length"></strong>
+</legend>

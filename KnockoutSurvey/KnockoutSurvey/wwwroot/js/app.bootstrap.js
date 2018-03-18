@@ -1,19 +1,19 @@
 "use strict";
 requirejs.config({
-    paths: {
+    paths: {        
+        // libs
         'jquery': '../lib/jquery/dist/jquery.min',
         'knockout': '../lib/knockout/dist/knockout',
-        'koValidation': "../lib/knockout/validation/dist/knockout.validation",
+        'koValidation': "../lib/knockout-validation/dist/knockout.validation",
+        'moment': "../lib/moment/moment",
+       
+        // apps
+        'bootstrap.ko': 'app.bootstrap.ko',
+        'surveyModel': 'models.surveyModel'
     }
 });
 
-// Server Side
-// CSS improve
-// Footer
-// KO Templates
-// Test JavaScript
-// Final Check
-
-require(['jquery',],
-    function ($) {
+require(['bootstrap.ko' ],
+    function (bootstrapKo) {
+        bootstrapKo();
     });
