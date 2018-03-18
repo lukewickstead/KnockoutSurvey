@@ -764,6 +764,19 @@
               <e p="bower.json" t="Include" />
               <e p="require.js" t="Include" />
             </e>
+            <e p="toastr" t="Include">
+              <e p=".bower.json" t="Include" />
+              <e p="LICENSE" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="bower.json" t="Include" />
+              <e p="toastr.css" t="Include" />
+              <e p="toastr.js" t="Include" />
+              <e p="toastr.js.map" t="Include" />
+              <e p="toastr.less" t="Include" />
+              <e p="toastr.min.css" t="Include" />
+              <e p="toastr.min.js" t="Include" />
+              <e p="toastr.scss" t="Include" />
+            </e>
           </e>
         </e>
       </e>

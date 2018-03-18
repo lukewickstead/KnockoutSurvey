@@ -1,6 +1,6 @@
 "use strict";
-define(['knockout', 'moment', 'jquery', 'jquery',  'koValidation'],
-    function (ko, moment, $) {
+define(['knockout', 'moment', 'jquery', 'toastr', 'koValidation'],
+    function (ko, moment, $, toastr) {
         return function surveyModel() {
 
             var self = this;
@@ -73,6 +73,9 @@ define(['knockout', 'moment', 'jquery', 'jquery',  'koValidation'],
             self.isValid = function () {
                 return self.isPageOneValid() && self.isPageTwoValid();
             };
+                      
+            // TODO Put under test    
+            self.isSubmitted = ko.observable(false)
             
             self.submit = function() {
                 var theModel = {
@@ -84,14 +87,20 @@ define(['knockout', 'moment', 'jquery', 'jquery',  'koValidation'],
                     Feedback : self.feedBack()
                 };
                 
+                // TODO: LW - This needs to be refactoed and put under test
                 $.ajax('Survey/Submit', {
                     data : JSON.stringify(theModel),
                     contentType : 'application/json; charset=utf-8',
                     type : 'POST',
                     dataType: 'json',
                     success: function(result) {
-                        console.log('Data received: ');
-                        console.log(result);
+                        self.isSubmitted(true)
+                        console.log('Survey Submitted: ' + result);
+                        toastr.success("Thank You for your survey!");
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {                       
+                        toastr.error("An error was returned, please try again.");
+                        console.log('Survey Submitted Error: '+  thrownError, ', ' + xhr.responseText);
                     }
                 });                
             };            

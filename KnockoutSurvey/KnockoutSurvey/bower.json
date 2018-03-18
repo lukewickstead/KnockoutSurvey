@@ -7,6 +7,7 @@
     "requirejs": "^2.3.5",
     "moment": "^2.21.0",
     "knockout": "^3.4.2",
-    "knockout-validation": "^2.0.3"
+    "knockout-validation": "^2.0.3",
+    "toastr": "^2.1.3"
   }
 }

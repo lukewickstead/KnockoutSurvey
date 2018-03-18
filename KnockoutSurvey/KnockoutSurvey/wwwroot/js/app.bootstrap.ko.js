@@ -29,6 +29,5 @@ define(['knockout', 'koValidation', 'surveyModel', 'setInterval'],
         model.dateOfBirth("1978-10-25");
         model.location("Right here, right now!");
         model.feedBack("Comments comment comment comment comment comment comment comment comment comment");
-
     }
 });

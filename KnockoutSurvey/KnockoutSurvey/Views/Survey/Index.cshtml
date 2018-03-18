@@ -1,7 +1,6 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Survey";
 }
-
 
 <!--Page One-->
 <div id="pageOne" data-bind="visible: page() == 1">
@@ -112,12 +111,17 @@
 </div>
 
 <!--Buttons-->
-<button data-bind="click: gotoPageTwo, visible: page() == 1, enable: isPageOneValid() == true" class="btn btn-primary">Next</button>
-<button data-bind="click: gotoPageOne, visible: page() == 2" class="btn btn-primary">Previous</button>
-<button data-bind="click: submit, enable: isValid()" class="btn btn-primary">Submit</button>
+<button data-bind="click: gotoPageTwo, visible: page() == 1 && !isSubmitted(), enable: isPageOneValid() == true " class="btn btn-primary">Next</button>
+<button data-bind="click: gotoPageOne, visible: page() == 2 && !isSubmitted()" class="btn btn-primary">Previous</button>
+<button data-bind="click: submit, enable: isValid(), visible: !isSubmitted()" class="btn btn-primary">Submit</button>
 
+<div data-bind="visible: isSubmitted()">
+    Thank You; your  survey has been submitted.
+</div>
+
+@* Enable this for debug
 <legend class="well">
     <pre data-bind="text: ko.toJSON($data, null, 2)"></pre>
     Errors: <strong data-bind="text: pageOneErrors().length"></strong> &
     <strong data-bind="text: pageTwoErrors().length"></strong>
-</legend>
+</legend>*@
