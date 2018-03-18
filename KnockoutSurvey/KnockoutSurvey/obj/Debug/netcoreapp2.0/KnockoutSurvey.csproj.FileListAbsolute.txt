@@ -1,0 +1,10 @@
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/bin/Debug/netcoreapp2.0/KnockoutSurvey.deps.json
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/bin/Debug/netcoreapp2.0/KnockoutSurvey.runtimeconfig.json
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/bin/Debug/netcoreapp2.0/KnockoutSurvey.runtimeconfig.dev.json
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/bin/Debug/netcoreapp2.0/KnockoutSurvey.dll
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/bin/Debug/netcoreapp2.0/KnockoutSurvey.pdb
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/obj/Debug/netcoreapp2.0/KnockoutSurvey.csproj.CoreCompileInputs.cache
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/obj/Debug/netcoreapp2.0/KnockoutSurvey.AssemblyInfoInputs.cache
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/obj/Debug/netcoreapp2.0/KnockoutSurvey.AssemblyInfo.cs
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/obj/Debug/netcoreapp2.0/KnockoutSurvey.dll
+/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/obj/Debug/netcoreapp2.0/KnockoutSurvey.pdb
