@@ -27,6 +27,7 @@ define(['knockout', 'moment', 'jquery', 'jquery',  'koValidation'],
             // LOCATION
             self.location = ko.observable().extend({
                 required: {message: 'Please enter your location'},
+                minLength: {params: 3, message: 'Your location must be more than 3 characters'},
                 maxLength: {params: 100, message: 'Your location must not be more than 100 characters'}
             });
 

@@ -4,10 +4,12 @@ requirejs.config({
         'surveyModel': '../../KnockoutSurvey/wwwroot/js/models.surveyModel',
 
         // src.libs
+        'jquery': '../../KnockoutSurvey/wwwroot/lib/jquery/dist/jquery',
         'knockout': '../../KnockoutSurvey/wwwroot/lib/knockout/dist/knockout',
         'koValidation': '../../KnockoutSurvey/wwwroot/lib/knockout-validation/dist/knockout.validation',
         'moment': '../../KnockoutSurvey/wwwroot/lib/moment/moment',
 
+        
         // tests.jasmine
         'jasmine': 'lib/jasmine-2.4.1/jasmine',
         'jasmine-html': 'lib/jasmine-2.4.1/jasmine-html',

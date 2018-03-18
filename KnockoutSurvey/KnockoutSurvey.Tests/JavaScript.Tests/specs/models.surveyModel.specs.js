@@ -174,6 +174,24 @@ define(["knockout", "surveyModel", "surveyModelBuilder", "stringBuilder"],
                 });
             });
 
+            describe("and the location field is too short", function () {
+
+                beforeEach(function () {
+                    this.model.location(stringBuilder.stringWithLength(2));
+                    this.locationErrors = ko.validation.group(this.model.location);
+                });
+
+                it("then the model is reported as invalid", function () {
+                    expect(this.model.isValid()).toEqual(false);
+                });
+
+                it("then the model reports the field is required", function () {
+                    expect(this.locationErrors().length).toEqual(1);
+                    expect(this.locationErrors()[0]).toEqual("Your location must be more than 3 characters");
+                });
+            });
+
+
             describe("and the location field is too long", function () {
 
                 beforeEach(function () {
