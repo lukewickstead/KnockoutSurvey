@@ -14,7 +14,11 @@
     ],
     "frameworks": {
       "netcoreapp2.0": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.csproj": {
+            "projectPath": "/home/luke/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -26,6 +30,14 @@
   "frameworks": {
     "netcoreapp2.0": {
       "dependencies": {
+        "FluentAssertions": {
+          "target": "Package",
+          "version": "[5.2.0, )"
+        },
+        "Microsoft.AspNetCore.TestHost": {
+          "target": "Package",
+          "version": "[2.1.0-preview1-final, )"
+        },
         "Microsoft.NET.Test.Sdk": {
           "target": "Package",
           "version": "[15.3.0-preview-20170628-02, )"
@@ -35,6 +47,10 @@
           "target": "Package",
           "version": "[2.0.0, )",
           "autoReferenced": true
+        },
+        "System.Net.Http.Formatting.Extension": {
+          "target": "Package",
+          "version": "[5.2.3, )"
         },
         "xunit": {
           "target": "Package",

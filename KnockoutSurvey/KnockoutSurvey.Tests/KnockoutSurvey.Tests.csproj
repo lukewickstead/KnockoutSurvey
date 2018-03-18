@@ -4,12 +4,18 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.1.0-preview1-final" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
+    <PackageReference Include="System.Net.Http.Formatting.Extension" Version="5.2.3" />
     <PackageReference Include="xunit" Version="2.2.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="JavaScript.Tests\helpers" />
     <Folder Include="JavaScript.Tests\lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KnockoutSurvey\KnockoutSurvey.csproj" />
   </ItemGroup>
 </Project>

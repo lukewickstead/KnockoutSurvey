@@ -1,6 +1,6 @@
 "use strict";
-define(['knockout', 'moment', 'koValidation'],
-    function (ko, moment) {
+define(['knockout', 'moment', 'jquery', 'jquery',  'koValidation'],
+    function (ko, moment, $) {
         return function surveyModel() {
 
             var self = this;
@@ -72,5 +72,27 @@ define(['knockout', 'moment', 'koValidation'],
             self.isValid = function () {
                 return self.isPageOneValid() && self.isPageTwoValid();
             };
+            
+            self.submit = function() {
+                var theModel = {
+                    Title : self.title(),
+                    Name : self.name(),
+                    DateOfBirth : self.dateOfBirth(),
+                    Location : self.location(),
+                    Now : self.now(),
+                    Feedback : self.feedBack()
+                };
+                
+                $.ajax('Survey/Submit', {
+                    data : JSON.stringify(theModel),
+                    contentType : 'application/json; charset=utf-8',
+                    type : 'POST',
+                    dataType: 'json',
+                    success: function(result) {
+                        console.log('Data received: ');
+                        console.log(result);
+                    }
+                });                
+            };            
         };
     });

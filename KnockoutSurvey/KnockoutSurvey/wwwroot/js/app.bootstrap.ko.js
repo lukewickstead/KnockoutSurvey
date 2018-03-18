@@ -22,5 +22,13 @@ define(['knockout', 'koValidation', 'surveyModel', 'setInterval'],
         setInterval(function () {
             model.now(new Date());
         }, 1000);
+        
+        // Debug
+        model.title("Mr");
+        model.name("Luke");
+        model.dateOfBirth("1978-10-25");
+        model.location("Right here, right now!");
+        model.feedBack("Comments comment comment comment comment comment comment comment comment comment");
+
     }
 });

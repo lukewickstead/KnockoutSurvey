@@ -1,5 +1,3 @@
-using System;
-
 namespace KnockoutSurvey.Models
 {
     public class ErrorViewModel

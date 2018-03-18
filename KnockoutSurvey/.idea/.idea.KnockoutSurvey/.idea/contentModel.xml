@@ -8,22 +8,29 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="KnockoutSurvey" t="IncludeRecursive">
         <e p=".bowerrc" t="Include" />
+        <e p="Attributes" t="Include">
+          <e p="DateOfBirthAttribute.cs" t="Include" />
+          <e p="NowAttribute.cs" t="Include" />
+          <e p="TitleAttribute.cs" t="Include" />
+        </e>
         <e p="Controllers" t="Include">
-          <e p="HomeController.cs" t="Include" />
+          <e p="SurveyController.cs" t="Include" />
         </e>
         <e p="KnockoutSurvey.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="SurveyViewModel.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="Views" t="Include">
-          <e p="Home" t="Include">
-            <e p="Index.cshtml" t="Include" />
-          </e>
           <e p="Shared" t="Include">
             <e p="Error.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
+          </e>
+          <e p="Survey" t="Include">
+            <e p="Index.cshtml" t="Include" />
+            <e p="SurveyComplete.cshtml" t="Include" />
           </e>
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
@@ -761,6 +768,19 @@
         </e>
       </e>
       <e p="KnockoutSurvey.Tests" t="IncludeRecursive">
+        <e p="DotNetTests" t="Include">
+          <e p="Controllers" t="Include">
+            <e p="ControllerTestBase.cs" t="Include" />
+            <e p="SurveyControllerTests" t="Include">
+              <e p="WhenCallingGetOnSurveyController.cs" t="Include" />
+              <e p="WhenCallingPostOnSurveyController.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Helpers" t="Include">
+            <e p="StringExtensions.cs" t="Include" />
+            <e p="SurveyBuilder.cs" t="Include" />
+          </e>
+        </e>
         <e p="JavaScript.Tests" t="Include">
           <e p="SpecRunner.html" t="Include" />
           <e p="helpers" t="Include">
@@ -783,7 +803,6 @@
           <e p="tests.bootstrap.js" t="Include" />
         </e>
         <e p="KnockoutSurvey.Tests.csproj" t="IncludeRecursive" />
-        <e p="UnitTest1.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

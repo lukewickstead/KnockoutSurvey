@@ -60,7 +60,7 @@
     <div class="row">
         <div class="form-group">
             <label class="col-md-2 control-label"
-                   for="location">Location</label>
+                   for="location">Current Location</label>
 
             <div class="col-md-8">
                 <input class="form-control"
@@ -94,7 +94,7 @@
     <div class="row">
         <div class="form-group">
             <label class="col-md-2 control-label"
-                   for="feedback">Feed Back</label>
+                   for="feedback">User Feedback</label>
 
             <div class="col-md-8">
                 <textarea
@@ -114,7 +114,7 @@
 <!--Buttons-->
 <button data-bind="click: gotoPageTwo, visible: page() == 1, enable: isPageOneValid() == true" class="btn btn-primary">Next</button>
 <button data-bind="click: gotoPageOne, visible: page() == 2" class="btn btn-primary">Previous</button>
-<button data-bind="enable: isValid()" class="btn btn-primary">Submit</button>
+<button data-bind="click: submit, enable: isValid()" class="btn btn-primary">Submit</button>
 
 <legend class="well">
     <pre data-bind="text: ko.toJSON($data, null, 2)"></pre>
