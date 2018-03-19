@@ -59,6 +59,7 @@
             <e p="app.bootstrap.ko.js" t="Include" />
             <e p="models.surveyModel.js" t="Include" />
             <e p="window.console.js" t="Include" />
+            <e p="window.navigator.geolocation.js" t="Include" />
             <e p="window.setInterval.js" t="Include" />
           </e>
           <e p="lib" t="Include">

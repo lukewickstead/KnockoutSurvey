@@ -12,6 +12,7 @@ requirejs.config({
         // window exposure
         'setInterval': 'window.setInterval',
         'console': 'window.console',
+        'geolocation': 'window.navigator.geolocation',
 
         // apps
         'bootstrap.ko': 'app.bootstrap.ko',
@@ -19,8 +20,8 @@ requirejs.config({
     }
 });
 
-require(['bootstrap.ko', 'console', 'toastr', 'jquery', 'jquery-ui'],
-    function (bootstrapKo, console, toastr, $, jqueryUi) {
+require(['bootstrap.ko', 'console', 'toastr', 'jquery', 'jquery-ui', 'geolocation'],
+    function (bootstrapKo, console, toastr, $, jqueryUi, geolocation) {
 
         console.log("Bottstrapping: KO");
         bootstrapKo();

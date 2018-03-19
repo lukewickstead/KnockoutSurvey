@@ -1,7 +1,7 @@
 "use strict";
 
-define(['knockout', 'koValidation', 'surveyModel', 'setInterval'],
-    function (ko, koValidation, surveyModel, setInterval) {
+define(['knockout', 'koValidation', 'surveyModel', 'setInterval', 'geolocation'],
+    function (ko, koValidation, surveyModel, setInterval, geolocation) {
 
     return function init() {
 
@@ -23,11 +23,15 @@ define(['knockout', 'koValidation', 'surveyModel', 'setInterval'],
             model.now(new Date());
         }, 1000);
         
-        // Debug
+        // TODO: Remove
         model.title("Mr");
         model.name("Luke");
         model.dateOfBirth("1978-10-25");
-        model.location("Right here, right now!");
         model.feedBack("Comments comment comment comment comment comment comment comment comment comment");
+
+        geolocation.getCurrentPosition(function getLocationFromLatLong(position) {
+            //alert(position.coords.latitude + ',' + position.coords.longitude);           
+            model.location(position.coords.latitude + ',' + position.coords.longitude);
+        });        
     }
 });
