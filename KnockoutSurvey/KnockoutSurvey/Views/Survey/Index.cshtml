@@ -125,7 +125,7 @@
 <button data-bind="click: gotoPageOne, visible: page() == 2 && !isSubmitted()" class="btn btn-primary">Previous</button>
 <button data-bind="click: submit, enable: isValid(), visible: !isSubmitted()" class="btn btn-primary">Submit</button>
 
-<div data-bind="visible: isSubmitted()">
+<div class="thankYou" data-bind="visible: isSubmitted()">
     <h3>Thank you, your survey has been submitted.</h3>
 </div>
 

@@ -12,7 +12,7 @@ Either download the code or clone the repository
 
 You will neet dot net core installed.
 
-Cd into the direfctory containing the main project file for example:
+cd into the directory containing the main project file for example:
 
 > cd ~/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey
 
@@ -30,9 +30,9 @@ The application contains xunit tests and Jasmine tests
 
 ## Xunit Tests ##
 
-CD into the directory containing the test project, for example:
+cd into the directory containing the test project, for example:
 
-> CD ~/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey 
+> cd ~/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey 
 
 Then run the tests
 
@@ -41,7 +41,7 @@ Then run the tests
 
 ## Jasmine Tests ##
 
-Open the spec runner html file in a browser
+Open the spec runner html file in a browser to run the tests
 
 > ~/RiderProjects/KnockoutSurvey/KnockoutSurvey/KnockoutSurvey.Tests/JavaScript.Tests/SpecRunner.html
 

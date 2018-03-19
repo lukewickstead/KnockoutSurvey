@@ -46,7 +46,7 @@ input, label {
     font-size: 15px;
 }
 
-footer > p {
+.thankYou >h3, footer > p {
     font-family: 'Alegreya', serif;
     font-size: 25px;
     line-height: 23px;
