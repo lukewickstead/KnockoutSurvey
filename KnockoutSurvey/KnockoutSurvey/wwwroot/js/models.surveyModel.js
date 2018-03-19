@@ -5,7 +5,7 @@ define(['knockout', 'moment', 'jquery', 'toastr', 'koValidation'],
 
             var self = this;
 
-            // TITLE
+            // TITLE    
             self.availableTitles = ko.observableArray(['Miss', 'Mr', 'Mrs', 'Other']);
             self.title = ko.observable().extend({
                 required: {message: 'Please select your title'}
