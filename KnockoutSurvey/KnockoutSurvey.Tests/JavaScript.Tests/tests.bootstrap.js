@@ -8,6 +8,7 @@ requirejs.config({
         'knockout': '../../KnockoutSurvey/wwwroot/lib/knockout/dist/knockout',
         'koValidation': '../../KnockoutSurvey/wwwroot/lib/knockout-validation/dist/knockout.validation',
         'moment': '../../KnockoutSurvey/wwwroot/lib/moment/moment',
+        'toastr': '../../KnockoutSurvey/wwwroot/lib/toastr/toastr',
 
         
         // tests.jasmine
