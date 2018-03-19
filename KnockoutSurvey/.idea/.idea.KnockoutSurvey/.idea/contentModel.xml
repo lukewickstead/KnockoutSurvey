@@ -24,6 +24,7 @@
         <e p="Program.cs" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="Views" t="Include">
+          <e p="NewDirectory1" t="Include" />
           <e p="Shared" t="Include">
             <e p="Error.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
