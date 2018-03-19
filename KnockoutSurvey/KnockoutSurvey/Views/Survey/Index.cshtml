@@ -17,7 +17,7 @@
                     <div class="col-md-8">
                         <select class="form-control"
                                 id="title"
-                                data-bind="options: availableTitles, value: title, optionsCaption: 'Please select...'">
+                                data-bind="options: availableTitles, value: title, optionsCaption: 'Please select...', event: { blur: titleBlurEvent }">
                         </select>
                         <div class="alert alert-danger fade in"
                              data-bind="validationMessage: title"
@@ -36,7 +36,7 @@
                                id="name"
                                type="text"
                                placeholder="Name (required)"
-                               data-bind="value: name"/>
+                               data-bind="value: name, event: { blur: nameBlurEvent }"/>
                         <div class="alert alert-danger fade in" data-bind="validationMessage: name"></div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                                placeholder="yyyy-mm-dd"
                                class="datepicker-here" 
                                data-position="right top"
-                               data-bind="value: dateOfBirth"/>
+                               data-bind="value: dateOfBirth , event: { blur: dateOfBirthBlurEvent }"/>
                         <div class="alert alert-danger fade in" data-bind="validationMessage: dateOfBirth"></div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                         id="feedback"
                         rows="5"
                         placeholder="Comments...."
-                        data-bind="value: feedBack",
+                        data-bind="value: feedBack, event: { blur: feedbackBlurEvent }",
                         maxlength="500">
                 </textarea>
                         <div class="alert alert-danger fade in" data-bind="validationMessage: feedBack"></div>

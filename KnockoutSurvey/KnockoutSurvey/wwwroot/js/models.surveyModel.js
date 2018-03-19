@@ -59,9 +59,26 @@ define(['knockout', 'moment', 'jquery', 'toastr', 'koValidation'],
             };
 
             // VALIDATION
+
+            self.titleBlurEvent = function () {
+                ko.validation.group([self.title]).showAllMessages()
+            };
+
+            self.nameBlurEvent = function () {
+                ko.validation.group([self.name]).showAllMessages()
+            };
+
+            self.dateOfBirthBlurEvent = function () {
+                ko.validation.group([self.dateOfBirth]).showAllMessages()
+            };
+
+            self.feedbackBlurEvent = function () {
+                ko.validation.group([self.feedBack]).showAllMessages()
+            };
+
             self.pageOneErrors = ko.validation.group([self.title, self.name, self.dateOfBirth]);
             self.pageTwoErrors = ko.validation.group([self.location, self.now, self.feedBack]);
-
+            
             self.isPageOneValid = function () {
                 return self.pageOneErrors().length === 0;
             };
