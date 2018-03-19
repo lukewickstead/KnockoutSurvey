@@ -76,7 +76,9 @@ define(['knockout', 'moment', 'jquery', 'toastr', 'koValidation'],
                       
             // TODO Put under test    
             self.isSubmitted = ko.observable(false)
-            
+
+            // TODO: LW - This needs to be refactoed and put under test
+           
             self.submit = function() {
                 var theModel = {
                     Title : self.title(),
@@ -87,7 +89,6 @@ define(['knockout', 'moment', 'jquery', 'toastr', 'koValidation'],
                     Feedback : self.feedBack()
                 };
 
-                // TODO: LW - This needs to be refactoed and put under test
                 $.ajax('Survey/Submit', {
                     data : JSON.stringify(theModel),
                     contentType : 'application/json; charset=utf-8',

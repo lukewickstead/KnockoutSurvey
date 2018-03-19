@@ -15,7 +15,7 @@ define(['knockout', 'koValidation', 'surveyModel', 'setInterval', 'geolocation']
             errorElementClass: 'has-error',
             errorMessageClass: 'alert alert-danger'
         }, true);
-
+        
         var model = new surveyModel();
         ko.applyBindings(model);
 
@@ -24,8 +24,6 @@ define(['knockout', 'koValidation', 'surveyModel', 'setInterval', 'geolocation']
         }, 1000);
         
         geolocation.getCurrentPosition(function getLocationFromLatLong(position) {
-            var url = "Location/Get?latitude=" + position.coords.latitude + "&longitude=" + position.coords.longitude;
-            
             $.getJSON("Location/Get?latitude=" + position.coords.latitude + "&longitude=" + position.coords.longitude )
                 .fail(function (d, textStatus, error) {                   
                     model.location(position.coords.latitude + ',' + position.coords.longitude);
