@@ -1,7 +1,6 @@
 ﻿using System.Net;
-using KnockoutSurvey.Infrastructure;
 
-namespace KnockoutSurvey.Services
+namespace KnockoutSurvey.Infrastructure.Services
 {
     // ReSharper disable once ClassNeverInstantiated.Global
     public class WebClientAdapter : IWebClientAdapter

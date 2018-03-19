@@ -1,4 +1,4 @@
-﻿namespace KnockoutSurvey.Infrastructure
+﻿namespace KnockoutSurvey.Infrastructure.Services
 {
     public interface IWebClientAdapter
     {

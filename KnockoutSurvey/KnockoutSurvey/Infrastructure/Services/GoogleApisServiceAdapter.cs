@@ -1,7 +1,7 @@
-﻿using KnockoutSurvey.Models;
+﻿using KnockoutSurvey.Infrastructure.Services.Dtos;
 using Newtonsoft.Json;
 
-namespace KnockoutSurvey.Infrastructure
+namespace KnockoutSurvey.Infrastructure.Services
 {
     // ReSharper disable once ClassNeverInstantiated.Global
     public class GoogleApisServiceAdapter : IGoogleApisServiceAdapter

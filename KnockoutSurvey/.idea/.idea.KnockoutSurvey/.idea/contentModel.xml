@@ -19,17 +19,31 @@
         </e>
         <e p="Infrastructure" t="Include">
           <e p="ConsoleAdapter.cs" t="Include" />
-          <e p="GoogleApisServiceAdapter.cs" t="Include" />
           <e p="IConsoleAdapter.cs" t="Include" />
-          <e p="IGoogleApisServiceAdapter.cs" t="Include" />
-          <e p="IWebClientAdapter.cs" t="Include" />
-          <e p="WebClientAdapter.cs" t="Include" />
+          <e p="Services" t="Include">
+            <e p="Dtos" t="Include">
+              <e p="AddressComponent.cs" t="Include" />
+              <e p="Bounds.cs" t="Include" />
+              <e p="Geometry.cs" t="Include" />
+              <e p="Location.cs" t="Include" />
+              <e p="Northeast.cs" t="Include" />
+              <e p="Northeast2.cs" t="Include" />
+              <e p="Result.cs" t="Include" />
+              <e p="RootObject.cs" t="Include" />
+              <e p="Southwest.cs" t="Include" />
+              <e p="Southwest2.cs" t="Include" />
+              <e p="Viewport.cs" t="Include" />
+            </e>
+            <e p="GoogleApisServiceAdapter.cs" t="Include" />
+            <e p="IGoogleApisServiceAdapter.cs" t="Include" />
+            <e p="IWebClientAdapter.cs" t="Include" />
+            <e p="WebClientAdapter.cs" t="Include" />
+          </e>
         </e>
         <e p="KnockoutSurvey.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="Address.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
-          <e p="GoogleApiModels.cs" t="Include" />
           <e p="SurveyViewModel.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />

@@ -1,5 +1,6 @@
 ﻿using KnockoutSurvey.Controllers;
 using KnockoutSurvey.Infrastructure;
+using KnockoutSurvey.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Moq.Language.Flow;
