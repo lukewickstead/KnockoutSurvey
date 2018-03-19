@@ -48,6 +48,10 @@
           "version": "[2.0.0, )",
           "autoReferenced": true
         },
+        "Moq": {
+          "target": "Package",
+          "version": "[4.8.2, )"
+        },
         "System.Net.Http.Formatting.Extension": {
           "target": "Package",
           "version": "[5.2.3, )"

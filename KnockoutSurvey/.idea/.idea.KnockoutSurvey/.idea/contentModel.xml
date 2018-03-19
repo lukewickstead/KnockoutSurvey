@@ -14,11 +14,20 @@
           <e p="TitleAttribute.cs" t="Include" />
         </e>
         <e p="Controllers" t="Include">
+          <e p="LocationController.cs" t="Include" />
           <e p="SurveyController.cs" t="Include" />
+        </e>
+        <e p="Infrastructure" t="Include">
+          <e p="GoogleApisServiceAdapter.cs" t="Include" />
+          <e p="IGoogleApisServiceAdapter.cs" t="Include" />
+          <e p="IWebClientAdapter.cs" t="Include" />
+          <e p="WebClientAdapter.cs" t="Include" />
         </e>
         <e p="KnockoutSurvey.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
+          <e p="Address.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="GoogleApiModels.cs" t="Include" />
           <e p="SurveyViewModel.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
@@ -1540,6 +1549,9 @@
         <e p="DotNetTests" t="Include">
           <e p="Controllers" t="Include">
             <e p="ControllerTestBase.cs" t="Include" />
+            <e p="LocationControllerTests" t="Include">
+              <e p="WhenCallingGetOnLocationController.cs" t="Include" />
+            </e>
             <e p="SurveyControllerTests" t="Include">
               <e p="WhenCallingGetOnSurveyController.cs" t="Include" />
               <e p="WhenCallingPostOnSurveyController.cs" t="Include" />

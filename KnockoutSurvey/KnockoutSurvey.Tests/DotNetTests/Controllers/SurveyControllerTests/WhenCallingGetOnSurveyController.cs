@@ -23,11 +23,11 @@ namespace KnockoutSurvey.Tests.DotNetTests.Controllers.SurveyControllerTests
             Assert.Equal("Index", result.ViewName);
         }
         
-        [Theory(Skip = "Cannot get to run; always returns not found despite controller being hit")]
+        [Theory(Skip = "Cannot get to run; always returns not found despite controller being hit!!")]
         [InlineData("/")]
         [InlineData("/Survey")]
         [InlineData("/Survey/Get")]
-        public async Task ReturnHelloWorld(string url)
+        public async Task ThenTheCurrentResponseIsReturned(string url)
         {
             // Act
             var response = await GetAsync(url);
