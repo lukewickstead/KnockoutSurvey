@@ -1,4 +1,5 @@
-//"use strict";
+"use strict";
+
 requirejs.config({
     paths: {
         // libs
@@ -8,7 +9,7 @@ requirejs.config({
         'koValidation': '../lib/knockout-validation/dist/knockout.validation',
         'moment': '../lib/moment/moment',
         'toastr': '../lib/toastr/toastr',
-       
+
         // window exposure
         'setInterval': 'window.setInterval',
         'console': 'window.console',
@@ -16,43 +17,22 @@ requirejs.config({
 
         // apps
         'bootstrap.ko': 'app.bootstrap.ko',
+        'bootstrap.toastr': 'app.bootstrap.toastr',
+        'bootstrap.jqueryUi': 'app.bootstrap.jqueryUi',
+
         'surveyModel': 'models.surveyModel'
     }
 });
 
-require(['bootstrap.ko', 'console', 'toastr', 'jquery', 'jquery-ui', 'geolocation'],
-    function (bootstrapKo, console, toastr, $, jqueryUi, geolocation) {
+require(['bootstrap.ko', 'bootstrap.toastr', 'bootstrap.jqueryUi'],
+    function (bootstrapKo, bootstrapToastr, bootstrapJueryUi) {
 
         console.log("Bottstrapping: KO");
         bootstrapKo();
-        
-        // TODO: refactor
 
-        toastr.options = {
-            "closeButton": false,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": false,
-            "positionClass": "toast-top-right",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        }
+        console.log("Bottstrapping: toastr");
+        bootstrapToastr();
 
-        var now = new Date();
-        var minDate = new Date(now.getFullYear() - 125, now.getMonth(), now.getDay());       
-        
-        $('#dateOfBirth').datepicker({
-            changeMonth: true,
-            changeYear: true,
-            dateFormat: 'dd/mm/yy',
-            minDate:  minDate
-        });
+        console.log("Bottstrapping: jquery-ui");
+        bootstrapJueryUi();
     });

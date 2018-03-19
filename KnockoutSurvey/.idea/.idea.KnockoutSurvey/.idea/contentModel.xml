@@ -55,8 +55,10 @@
           <e p="favicon.ico" t="Include" />
           <e p="images" t="Include" />
           <e p="js" t="Include">
+            <e p="app.bootstrap.jqueryUi.js" t="Include" />
             <e p="app.bootstrap.js" t="Include" />
             <e p="app.bootstrap.ko.js" t="Include" />
+            <e p="app.bootstrap.toastr.js" t="Include" />
             <e p="models.surveyModel.js" t="Include" />
             <e p="window.console.js" t="Include" />
             <e p="window.navigator.geolocation.js" t="Include" />
