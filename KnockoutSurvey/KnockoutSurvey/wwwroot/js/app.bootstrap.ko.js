@@ -23,12 +23,6 @@ define(['knockout', 'koValidation', 'surveyModel', 'setInterval', 'geolocation']
             model.now(new Date());
         }, 1000);
         
-        // TODO: Remove
-        model.title("Mr");
-        model.name("Luke");
-        model.dateOfBirth("1978-10-25");
-        model.feedBack("Comments comment comment comment comment comment comment comment comment comment");
-
         geolocation.getCurrentPosition(function getLocationFromLatLong(position) {
             var url = "Location/Get?latitude=" + position.coords.latitude + "&longitude=" + position.coords.longitude;
             

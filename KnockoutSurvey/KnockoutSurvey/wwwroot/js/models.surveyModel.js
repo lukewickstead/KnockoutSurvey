@@ -86,7 +86,11 @@ define(['knockout', 'moment', 'jquery', 'toastr', 'koValidation'],
                     Now : self.now(),
                     Feedback : self.feedBack()
                 };
-                
+
+
+                debugger;
+
+
                 // TODO: LW - This needs to be refactoed and put under test
                 $.ajax('Survey/Submit', {
                     data : JSON.stringify(theModel),
