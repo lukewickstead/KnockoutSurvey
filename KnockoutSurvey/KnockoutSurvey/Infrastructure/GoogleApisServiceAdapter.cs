@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace KnockoutSurvey.Infrastructure
 {
     // ReSharper disable once ClassNeverInstantiated.Global
-        public class GoogleApisServiceAdapter : IGoogleApisServiceAdapter
+    public class GoogleApisServiceAdapter : IGoogleApisServiceAdapter
     {
         // The API key should not really be checked. It should be added into the config during deployment.
         private const string BaseGoogleApisUrl =

@@ -3,8 +3,11 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using FluentAssertions;
+using KnockoutSurvey.Controllers;
+using KnockoutSurvey.Infrastructure;
 using KnockoutSurvey.Models;
 using KnockoutSurvey.Tests.DotNetTests.Helpers;
+using Moq;
 using Xunit;
 
 namespace KnockoutSurvey.Tests.DotNetTests.Controllers.SurveyControllerTests
@@ -57,6 +60,31 @@ namespace KnockoutSurvey.Tests.DotNetTests.Controllers.SurveyControllerTests
             response.StatusCode.Should().Be(HttpStatusCode.OK);
         }
 
+        [Fact]
+        public void AndTheSurveyIsValidThenConsoleIsCalledWithTheDetails()
+        {
+            // Arrange
+            var repo = new MockRepository(MockBehavior.Default);
+            var mockConsoleAdapter = repo.Create<IConsoleAdapter>();
+            var surveyController = new SurveyController(mockConsoleAdapter.Object);
+            
+            var survey = SurveBuilderWithValidDefaults()
+                .Build();
+
+            // Act
+            surveyController.Submit(survey);
+
+            // Assert
+            mockConsoleAdapter.Verify(x => x.WriteLine(It.IsAny<string>()), Times.Exactly(7));
+            mockConsoleAdapter.Verify(x => x.WriteLine("Survey Received:"), Times.Once);
+            mockConsoleAdapter.Verify(x => x.WriteLine("  Title: " + survey.Title.ToString()), Times.Once);
+            mockConsoleAdapter.Verify(x => x.WriteLine("  Name: " + survey.Name), Times.Once);
+            mockConsoleAdapter.Verify(x => x.WriteLine("  Date Of Birth: " + survey.DateOfBirth), Times.Once);
+            mockConsoleAdapter.Verify(x => x.WriteLine("  Location: " + survey.Location), Times.Once);
+            mockConsoleAdapter.Verify(x => x.WriteLine("  Now: " + survey.Now), Times.Once);
+            mockConsoleAdapter.Verify(x => x.WriteLine("  Feedback: " + survey.Feedback), Times.Once);
+        }
+        
         [Fact]
         public async Task AndTheTitleFieldIsNotProvidedThenTheCorrectValidationMessageIsReturned()
         {

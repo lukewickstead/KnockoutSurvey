@@ -1,6 +1,8 @@
 ﻿using System.Threading.Tasks;
 using KnockoutSurvey.Controllers;
+using KnockoutSurvey.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
+using Moq;
 using Xunit;
 
 namespace KnockoutSurvey.Tests.DotNetTests.Controllers.SurveyControllerTests
@@ -8,10 +10,13 @@ namespace KnockoutSurvey.Tests.DotNetTests.Controllers.SurveyControllerTests
     public class WhenCallingGetOnSurveyController : ControllerTestBase
     {
         private readonly SurveyController _surveyController;
+        private Mock<IConsoleAdapter> _mockConsoleAdapter;
 
         public WhenCallingGetOnSurveyController()
         {
-            _surveyController = new SurveyController();
+            var repo = new MockRepository(MockBehavior.Default);
+            _mockConsoleAdapter = repo.Create<IConsoleAdapter>();
+            _surveyController = new SurveyController(_mockConsoleAdapter.Object);
         }
         
         [Fact]

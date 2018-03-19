@@ -11,16 +11,16 @@ namespace KnockoutSurvey.Tests.DotNetTests.Controllers.LocationControllerTests
     public class WhenCallingGetOnLocationController
     {
         private readonly LocationController _locationController;
-        private readonly Mock _mockWebClientAdapter;
+        private readonly Mock<IWebClientAdapter> _mockWebClientAdapter;
 
         public WhenCallingGetOnLocationController()
         {
-            var repo = new MockRepository(MockBehavior.Strict);
+            var repo = new MockRepository(MockBehavior.Default);
             _mockWebClientAdapter = repo.Create<IWebClientAdapter>();
 
             _locationController =
                 new LocationController(
-                    new GoogleApisServiceAdapter(_mockWebClientAdapter.As<IWebClientAdapter>().Object));
+                    new GoogleApisServiceAdapter(_mockWebClientAdapter.Object));
         }
 
         [Fact]
@@ -54,7 +54,7 @@ namespace KnockoutSurvey.Tests.DotNetTests.Controllers.LocationControllerTests
 
         private ISetup<IWebClientAdapter, string> StubWebClientAdapterWithResult()
         {
-            return _mockWebClientAdapter.As<IWebClientAdapter>()
+            return _mockWebClientAdapter
                 .Setup(
                     x => x.DownloadString(
                         "https://maps.googleapis.com/maps/api/geocode/json?latlng=1,2&key=AIzaSyApiY9lI5Q8szDsjvEm2MHrgEIz2EbIQP4"));

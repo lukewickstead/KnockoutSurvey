@@ -18,7 +18,9 @@
           <e p="SurveyController.cs" t="Include" />
         </e>
         <e p="Infrastructure" t="Include">
+          <e p="ConsoleAdapter.cs" t="Include" />
           <e p="GoogleApisServiceAdapter.cs" t="Include" />
+          <e p="IConsoleAdapter.cs" t="Include" />
           <e p="IGoogleApisServiceAdapter.cs" t="Include" />
           <e p="IWebClientAdapter.cs" t="Include" />
           <e p="WebClientAdapter.cs" t="Include" />
