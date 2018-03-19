@@ -96,7 +96,7 @@ define(['knockout', 'moment', 'jquery', 'toastr', 'koValidation'],
                     success: function(result) {
                         self.isSubmitted(true)
                         console.log('Survey Submitted: ' + result);
-                        toastr.success("Thank You for your survey!");
+                        toastr.success("Thank you, your survey has been submitted.");
                     },
                     error: function (xhr, ajaxOptions, thrownError) {                       
                         toastr.error("An error was returned, please try again.");
