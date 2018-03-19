@@ -1,13 +1,28 @@
 ﻿body {
-    padding-top: 75px;
+    padding-top: 50px;
     padding-bottom: 20px;
 }
 
 .navbar {
     color: white;
+    background-color: black;
 }
 
-.form-group {
-    padding-left: 20px;
-    padding-right: 20px;
+.survey-form-container {
+    width: 85%;
+    padding: 30px;
+    background: #FFFFFF;
+    margin: 50px auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+.survey-form-container h2 {
+    background: black;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    margin: -30px -30px 30px -30px;
 }
