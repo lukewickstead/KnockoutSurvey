@@ -1,13 +1,14 @@
-"use strict";
+//"use strict";
 requirejs.config({
     paths: {
         // libs
         'jquery': '../lib/jquery/dist/jquery.min',
+        'jquery-ui': '../lib/jquery-ui/jquery-ui.min',
         'knockout': '../lib/knockout/dist/knockout',
         'koValidation': '../lib/knockout-validation/dist/knockout.validation',
         'moment': '../lib/moment/moment',
         'toastr': '../lib/toastr/toastr',
-
+       
         // window exposure
         'setInterval': 'window.setInterval',
         'console': 'window.console',
@@ -18,11 +19,13 @@ requirejs.config({
     }
 });
 
-require(['bootstrap.ko', 'console', 'toastr'],
-    function (bootstrapKo, console, toastr) {
+require(['bootstrap.ko', 'console', 'toastr', 'jquery', 'jquery-ui'],
+    function (bootstrapKo, console, toastr, $, jqueryUi) {
 
         console.log("Bottstrapping: KO");
         bootstrapKo();
+        
+        // TODO: refactor
 
         toastr.options = {
             "closeButton": false,
@@ -41,7 +44,14 @@ require(['bootstrap.ko', 'console', 'toastr'],
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
         }
+
+        var now = new Date();
+        var minDate = new Date(now.getFullYear() - 125, now.getMonth(), now.getDay());       
         
-        
-        
+        $('#dateOfBirth').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd/mm/yy',
+            minDate:  minDate
+        });
     });
