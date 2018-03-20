@@ -2,13 +2,15 @@
 
 A sample survey form written in .NET Core and knockout.
 
-# To Clone #
+This was developed using Linux Mint and Jetbrains Rider.
+
+## To Clone ##
 
 Either download the code or clone the repository
 
 > git clone https://github.com/lukewickstead/KnockoutSurvey
 
-# To Run #
+## To Run ##
 
 You will neet dot net core installed.
 
@@ -24,7 +26,7 @@ Then to run
 
 > dotnet run
 
-# Tests #
+## Tests ##
 
 The application contains xunit tests and Jasmine tests
 
@@ -37,7 +39,6 @@ cd into the directory containing the test project, for example:
 Then run the tests
 
 > dotnet test
-
 
 ## Jasmine Tests ##
 
