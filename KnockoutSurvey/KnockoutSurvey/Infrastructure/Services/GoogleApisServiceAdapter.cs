@@ -8,7 +8,7 @@ namespace KnockoutSurvey.Infrastructure.Services
     {
         // The API key should not really be checked. It should be added into the config during deployment.
         private const string BaseGoogleApisUrl =
-            "https://maps.googleapis.com/maps/api/geocode/json?latlng={0},{1}&key=AIzaSyApiY9lI5Q8szDsjvEm2MHrgEIz2EbIQP4";
+            "https://maps.googleapis.com/maps/api/geocode/json?latlng={0},{1}&key=XXXXXGetAKeyXXXXX";
 
         private readonly IWebClientAdapter _webClientAdapter;
 
